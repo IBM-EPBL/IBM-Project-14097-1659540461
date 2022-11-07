@@ -1,168 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-   
-     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/homestyle.css') }}">
-     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
-     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/fancybox.css') }}" media="screen">
-     </style>
-     <!-- basic -->
-     <meta charset="utf-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <!-- mobile metas -->
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-     <!-- site metas -->
-     <title>Car Resale Value Prediction!</title>
-     <meta name="keywords" content="">
-     <meta name="description" content="">
-     <meta name="author" content="">
-     <!-- bootstrap css -->
-
-</head>
-<!-- body -->
-
-<body class="main-layout">
-     <!-- loader  -->
-
-     <header>
-          <!-- header inner -->
-          <div class="header">
-               <div class="container-fluid">
-                    <div class="row">
-                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                              <div class="full">
-                                   <div class="center-desk">
-                                        <div class="logo">
-                                             <a href="/home"><img src="{{url_for('static', filename='logo.png')}}"
-                                                       alt="#" /></a>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                              <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                                   <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                        data-target="#navbarsExample04" aria-controls="navbarsExample04"
-                                        aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"></span>
-                                   </button>
-                                   <div class="collapse navbar-collapse" id="navbarsExample04">
-                                        <ul class="navbar-nav mr-auto">
-                                             <li class="nav-item active">
-                                                  <a class="nav-link" href="/home">Home</a>
-                                             </li>
-                                             <li class="nav-item">
-                                                  <a class="nav-link" href="/predict">Predict</a>
-                                             </li>
-                                        </ul>
-                                   </div>
-                              </nav>
-                         </div>
-                    </div>
-               </div>
-          </div>
-     </header>
-     <!-- end header inner -->
-     <!-- end header -->
-     <!-- banner -->
-     <section class="banner_main">
-          <div id="banner1" class="carousel slide" data-ride="carousel">
-               <ol class="carousel-indicators">
-                    <li data-target="#banner1" data-slide-to="0" class="active"></li>
-                    <li data-target="#banner1" data-slide-to="1"></li>
-                    <li data-target="#banner1" data-slide-to="2"></li>
-               </ol>
-               <div class="carousel-inner">
-                    <div class="carousel-item active">
-                         <div class="container">
-                              <div class="carousel-caption">
-                                   <div class="text-bg">
-                                        <h1> <span class="blu">Welcome to <br></span>Know your car value!</h1>
-                                        <img src="{{url_for('static', filename='1.jpg')}}" height="20" alt="#" />
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="carousel-item">
-                         <div class="container">
-                              <div class="carousel-caption">
-                                   <div class="text-bg">
-                                        <h1> <span class="blu">Welcome to<br></span>Know your car value!</h1>
-                                        <img src="{{url_for('static', filename='2.jpg')}}" height="20" alt="#" />
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="carousel-item">
-                         <div class="container">
-                              <div class="carousel-caption">
-                                   <div class="text-bg">
-                                        <h1> <span class="blu">Welcome to <br></span>Know your car value!</h1>
-                                        <img src="{{url_for('static', filename='3.jpg')}}" height="20"  alt="#" />
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
-                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
-               </a>
-               <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-               </a>
-          </div>
-     </section>
-     <!-- end banner -->
-     <!-- about section -->
-     <div class="about">
-          <div class="container">
-               <div class="row d_flex">
-                    <div class="col-md-5">
-                         <div class="about_img">
-                              <figure><img src="{{url_for('static', filename='about.jpg')}}" alt="#" /></figure>
-                         </div>
-                    </div>
-                    <div class="col-md-7">
-                         <div class="titlepage">
-                              <h2>About Us</h2>
-                              <p>With difficult economic conditions, it is likely that sales of reconditioned
-                                   second-hand cars will
-                                   increase.
-                                   In most of the countries, it is common to lease a car rather than buying it outright.
-                                   A lease is a
-                                   bind contract between a buyer and seller
-                                   in which the buyer must pay fixed instalments for a pre-defined number of months/year
-                                   to the
-                                   seller.
-                                   After the lease period is over, the buyer has the possibility to buy the car at its
-                                   residual value
-                                   (resale value).
-                                   Thus, our application is of commercial interest to sellers to able to predict the
-                                   resale value of
-                                   cars with accuracy.
-
-                              </p>
-                         </div>
-                         <a class="read_more" href="/predict">Predict Price</a>
-                    </div>
-               </div>
-          </div>
-     </div>
-     <!-- about section -->
-     <!-- Our  Glasses section -->
-     <div class="copyright">
-          <footer>
-               <div class="container">
-                    <div class="row">
-                         <div class="col-md-12">
-                              <p>© 2022 All Rights Reserved.</p>
-                         </div>
-                    </div>
-               </div>
-     </div>
-     </footer>
-</body>
-
+    <head>
+        <title>Resale Value Prediction</title>
+        <style>
+            .body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .header {
+                top: 0px;
+                margin: 0px;
+                left: 0px;
+                right: 0px;
+                position: fixed;
+                background: #304040;
+                color: white;
+                overflow: hidden;
+                padding-bottom: 30px;
+                font-size: 2.25vw;
+                width: 100%;
+                padding-left: 0px;
+                text-align: center;
+                padding-top: 20px;
+            }
+            .second {
+                top: 80px;
+                bottom: 0px;
+                margin: 0px;
+                left: 0px;
+                right: 0%;
+                position: fixed;
+                padding: 0px;
+                width: 100%;
+            }
+            .inside {
+                top: 80px;
+                bottom: 0px;
+                margin: 0px;
+                left: 58.5%;
+                right: 0%;
+                position: fixed;
+                padding-left: 40px;
+                padding-top: 8%;
+                padding-right: 40px;
+                background-color: #e4eeff;
+                font-family: Georgia, serif;
+                color: black;
+                font-size: 20px;
+                text-align: justify;
+            }
+            .myButton {
+                border: none;
+                text-align: center;
+                cursor: pointer;
+                text-transform: uppercase;
+                outline: none;
+                overflow: hidden;
+                color: #fff;
+                font-weight: 700;
+                font-size: 12px;
+                background-color: #309090;
+                padding: 10px 15px;
+                margin: 0 auto;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">Get the Accurate Resale Value of your Car!!</div>
+        <div class="second">
+            <div class="inside">
+                With difficult economic conditions, it is likely that sales of
+                reconditioned second-hand cars will increase. In most of the
+                countries, it is common to lease a car rather than buying it
+                outright. A lease is a binding contract between a buyer and a
+                seller in which the buyer must pay fixed instalments for a
+                pre-defined number of months/years to the seller/financer. After
+                the lease period is over, the buyer has the possibility to buy
+                the car at its residual value, i.e. its expected resale value.
+                Thus, this application is of commercial interest to
+                seller/financers to be able to predict the residual value of
+                cars with accuracy. <br /><br /><br />
+                <div style="margin-left: 17%">
+                    <a href="{{url_for('predict')}}"
+                        ><button type="button" class="myButton">
+                            Want to know the resale value of your car??
+                        </button></a
+                    >
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
