@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/formstyle.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/font-awesome.css') }}">
+	
+	
+		<style>
+			.button {
+				border: none;
+				color: white;
+				padding: 15px 32px;
+				text-align: center;
+				margin-top: 20px;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				margin-top: 2em;
+				cursor: pointer;
+			}
+	
+			body {
+				padding: 1em;
+				font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 15px;
+				background-image: url(static/background_blur.jpg);
+				color: #b9b9b9;
+				background-color: #e3e3e3;
+			}
+	
+			/* Green */
+			.button2 {
+				background-color: #f0a500;
+			}
+		</style>
+	
+	</head>
+	
+	<section class="banner_main">
+		<div class="container">
+			<form action="/y_predict" method="post">
+				<center>
+					<h2 style="color:#f0a500">Predict the Price!</h2>
+				</center>
+	
+				<center>
+					<h3 style="font-family:verdana; color: tomato;">{{ypred}}</h3>
+				</center>
+				<div class="row">
+
+					<p>vechicleType</p>
+					<input name="vehicleType"required>
+					<p>yearOfRegistration</p>
+					<input name="yearOfRegistration"required>
+					<p>gearbox</p>
+					<input name="gearbox"required>
+					<p>powerPS</p>
+					<input name="powerPS"required>
+					<p>model</p>
+					<input name="model"required>
+					<p>kilometer</p>
+					<input name="kilometer"required>
+					<p>monthOfRegistration</p>
+					<input name="monthOfRegistration"required>
+					<p>fuelType</p>
+					<input name="fuelType"required>
+					<p>brand</p>
+					<input name="brand"required>
+					<p>notRepairedDamage</p>
+					<input name="notRepairedDamage"required>
+
+					<br>
+					<br>
+					<button type="submit">Submit</button>
+					<center> <a href="/home">Click here to go back Home!</a></center>
+			</form>
+	
+		</div>
+	
+	</html>
